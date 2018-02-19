@@ -1,0 +1,12 @@
+        Coluna        |          Tipo          | Modificadores 
+ unidade_id           | character varying(20)  | 
+ unidade_desc         | character varying(200) | 
+ cargo                | character varying(200) | 
+ tipo_cargo           | character varying(200) | 
+ cpf                  | character varying(20)  | 
+ data                 | date                   | 
+ nome                 | character varying(200) | 
+ unidade_orcamentaria | character varying(200) | 
+ total_vantagem       | character varying(20)  | 
+ total_liquido        | character varying(20)  | 
+

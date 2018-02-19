@@ -1,0 +1,19 @@
+                     Tabela "public.siconv"
+         Coluna         |          Tipo          | Modificadores 
+------------------------+------------------------+---------------
+ id                     | bigint                 | não nulo
+ uri                    | character varying(255) | 
+ data_assinatura        | date                   | 
+ data_fim_vigencia      | date                   | 
+ data_inicio_vigencia   | date                   | 
+ data_publicacao        | date                   | 
+ justificativa_resumida | text                   | 
+ modalidade             | character varying(255) | 
+ objeto_resumido        | text                   | 
+ orgao_concedente       | character varying(255) | 
+ proponente             | character varying(255) | 
+ situacao               | character varying(255) | 
+ valor_contra_partida   | numeric(20,2)          | 
+ valor_global           | numeric(20,2)          | 
+ valor_repasse          | numeric(20,2)          | 
+

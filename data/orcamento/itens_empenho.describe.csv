@@ -1,0 +1,13 @@
+  Coluna   |         Tipo          | Modificadores 
+ nume_empe | integer               | 
+ ano_refe  | integer               | 
+ codi_item | integer               | 
+ desc_itee | text                  | 
+ valo_unit | numeric(18,2)         | 
+ qtde_itee | numeric(16,2)         | 
+ desc_unid | text                  | 
+ data_ulal | date                  | 
+ matr_usua | character varying(30) | 
+ valo_tota | numeric(16,2)         | 
+ data_empe | date                  | 
+

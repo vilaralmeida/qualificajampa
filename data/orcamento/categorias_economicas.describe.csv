@@ -1,0 +1,8 @@
+          Tabela "public.categorias_economicas"
+     Coluna     |          Tipo          | Modificadores 
+----------------+------------------------+---------------
+ id             | bigint                 | não nulo
+ categoria_desc | character varying(255) | 
+Índices:
+    "categoria_desc_idx" btree (categoria_desc)
+

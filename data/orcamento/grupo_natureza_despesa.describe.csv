@@ -1,0 +1,8 @@
+       Tabela "public.grupo_natureza_despesa"
+   Coluna   |          Tipo          | Modificadores 
+------------+------------------------+---------------
+ id         | bigint                 | não nulo
+ grupo_desc | character varying(255) | 
+Índices:
+    "grupo_desc_idx" btree (grupo_desc)
+

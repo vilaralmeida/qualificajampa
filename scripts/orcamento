@@ -1,0 +1,107 @@
+##############################################################################
+# CODIGO FONTE DA QUALIFICACAO DE DADOS ABERTOS DA PREFEITURA DE JOAO PESSOA #
+# @Author: Rodrigo Almeida - rodrigo.almeida@gmail.com                       #
+# @Contato: +55 83 996075219                                                 #
+# Website: http://rodrigoalmeida.jampa.br                                    #
+##############################################################################
+
+## PASSO A PASSO PARA PREPARACAO DOS DADOS ##
+# 1. CLONAR REPOSITORIO GIT DO PROJETO JOAOPESSOA
+# 2. EFETUAR O DOWNLOAD DOS ARQUIVOS CSV DO PORTAL DA TRANSPARENCIA DE JOAO PESSOA 
+# (URL: transparencia.joaopessoa.pb.gov.br/download)
+# 3. SALVAR OS ARQUIVOS DENTRO DO DIRETORIO DATA/ NAS PASTAS CORRESPONDENTES 
+# EX.: SALVAR OS ARQUIVOS DE PESSOAL NA PASTA PESSOAL
+# 4. PARA CADA ARQUIVO SALVO, ENCONTRAR O NUMERO DE LINHAS DO ARQUIVO. SUGESTAO: USAR COMANDO wc -l
+# 5. ACESSAR URL http://www.publicacoesdeturismo.com.br/calculoamostral/ PARA CALCULAR AMOSTRA NECESSARIA
+# USANDO NUMERO DE LINHAS COMO POPULAÇÃO E CONFIGURAÇÂO: Erro Amostral 5%, Nível de Confiança: 95%
+# 6. EXECUTAR O SCRIPT ABAIXO NOS DIRETORIOS COM OS ARQUIVOS, SUBSTITUINDO O VALOR COUNT PELO NUMERO DA AMOSTRA
+
+## IMPORTANTE ##
+# PARA ESCOLHA ALEATORIA DE LINHAS DO ARQUIVO DE ORIGEM, INSTALAR O SCRIPT randomize-lines
+# No terminal (MAC OU LINUX)
+# wc -l <nome do arquivo> | retorna o numero de linhas no arquivo
+# rl --count=<tamanho da amostra> <arquivo origem> > <arquivo destino> | SALVA UM SUBCONJUNTO ALEATORIA DE LINHAS EM UM NOVO # ARQUIVO
+
+
+# SHELL SCRIPT PARA RANDOMIZAR ARQUIVO DE PESSOAL
+# Arquivo Random com Intervalo de Confiança de 99%, Margem de erro de 5%
+
+# wc -l licitacoes.csv # Resultado: 3429256 linhas
+rl --count=664 pessoal.csv > pessoal_random.csv
+
+
+# SHELL SCRIPT PARA RANDOMIZAR ARQUIVO DE LICITACOES
+# Arquivo Random com Intervalo de Confiança de 99%, Margem de erro de 5%
+ 
+# wc -l licitacoes.csv # Resultado: 60254 linhas
+rl --count=657 licitacoes.csv > licitacoes_random.csv
+
+
+# SHELL SCRIPT PARA RANDOMIZAR ARQUIVO DE PUBLICIDADE
+# Arquivo Random com Intervalo de Confiança de 99%, Margem de erro de 5%
+
+# wc -l publicidade.csv # Resultado: 2458 linhas
+rl --count=523 publicidade.csv > publicidade_random.csv
+
+ 
+# SHELL SCRIPT PARA RANDOMIZAR ARQUIVOS DE ORCAMENTO
+# Arquivo Random com Intervalo de Confiança de 99%, Margem de erro de 5%
+
+rl --count=660 despesa_lei131_2009.csv > despesa_lei131_2009_random.csv
+rl --count=660 despesa_lei131_2010.csv > despesa_lei131_2010_random.csv
+rl --count=661 despesa_lei131_2011.csv > despesa_lei131_2011_random.csv
+rl --count=661 despesa_lei131_2012.csv > despesa_lei131_2012_random.csv
+rl --count=661 despesa_lei131_2013.csv  > despesa_lei131_2013_random.csv
+rl --count=661 despesa_lei131_2014.csv  > despesa_lei131_2014_random.csv
+rl --count=661 despesa_lei131_2015.csv  > despesa_lei131_2015_random.csv
+rl --count=661 despesa_lei131_2016.csv  > despesa_lei131_2016_random.csv
+rl --count=661 despesa_lei131_2017.csv  > despesa_lei131_2017_random.csv
+rl --count=644 despesa_lei131_2018.csv  > despesa_lei131_2018_random.csv
+
+# 237406 linhas
+rl --count=662 guia_receita_despesa_extra.csv > guia_receita_despesa_extra_random.csv
+
+# 34261 linhas
+rl --count=651 itens_empenho_2009.csv > itens_empenho_2009_random.csv
+# 31741 linhas
+rl --count=650 itens_empenho_2010.csv > itens_empenho_2010_random.csv
+# 37765 linhas
+rl --count=653 itens_empenho_2011.csv > itens_empenho_2011_random.csv
+# 32264 linhas
+rl --count=651 itens_empenho_2012.csv > itens_empenho_2012_random.csv
+# 31640 linhas
+rl --count=650 itens_empenho_2013.csv > itens_empenho_2013_random.csv
+# 27425 linhas
+rl --count=648 itens_empenho_2014.csv > itens_empenho_2014_random.csv
+# 23932 linhas
+rl --count=646 itens_empenho_2015.csv > itens_empenho_2015_random.csv
+# 20257 linhas
+rl --count=643 itens_empenho_2016.csv > itens_empenho_2016_random.csv
+# 24165 linhas
+rl --count=646 itens_empenho_2017.csv > itens_empenho_2017_random.csv
+# 3305 linhas
+rl --count=553 itens_empenho_2018.csv > itens_empenho_2018_random.csv
+
+# 1310 linhas 
+rl --count=441 receita_lei131_2009.csv > receita_lei131_2009_random.csv
+# 1257 linhas
+rl --count=435 receita_lei131_2010.csv > receita_lei131_2010_random.csv
+# 1257 lihas
+rl --count=435 receita_lei131_2011.csv > receita_lei131_2011_random.csv
+# 1236 linhas
+rl --count=432 receita_lei131_2012.csv > receita_lei131_2012_random.csv
+# 1456 linhas
+rl --count=456 receita_lei131_2013.csv > receita_lei131_2013_random.csv
+# 1521 linhas
+rl --count=463 receita_lei131_2014.csv > receita_lei131_2014_random.csv
+# 1605 linhas
+rl --count=470 receita_lei131_2015.csv > receita_lei131_2015_random.csv
+# 1657 linhas
+rl --count=474 receita_lei131_2016.csv > receita_lei131_2016_random.csv
+# 1484 linhas
+rl --count=459 receita_lei131_2017.csv > receita_lei131_2017_random.csv
+# 249 linhas
+rl --count=182 receita_lei131_2018.csv > receita_lei131_2018_random.csv
+
+# 47134 linhas
+rl --count=655 reo_rgf_lei131.csv > reo_rgf_lei131_random.csv

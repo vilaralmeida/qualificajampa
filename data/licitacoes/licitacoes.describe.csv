@@ -1,0 +1,11 @@
+Field	Type	Null	Key	Default	Extra
+ID	bigint(20) unsigned	NO		0	
+data_postagem	datetime	NO		0000-00-00 00:00:00	
+titu	text	NO		NULL	
+obj	longtext	NO		NULL	
+nume_lici	longtext	YES		NULL	
+data_lici	date	YES		NULL	
+seto_inte	longtext	YES		NULL	
+modalidade	varchar(256)	YES		NULL	
+comissao	varchar(256)	YES		NULL	
+docu	varchar(256)	YES		NULL	

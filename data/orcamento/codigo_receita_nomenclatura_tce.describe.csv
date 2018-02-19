@@ -1,0 +1,7 @@
+   Tabela "public.codigo_receita_nomenclatura_tce"
+   Coluna    |          Tipo          | Modificadores 
+-------------+------------------------+---------------
+ codigo      | integer                | 
+ descricao   | text                   | 
+ escriturada | character varying(300) | 
+

@@ -1,0 +1,16 @@
+    Coluna     |          Tipo          |                        Modificadores                        
+ id            | integer                | não nulo valor padrão de nextval('secom_id_seq1'::regclass)
+ agencia       | character varying(255) | 
+ campanha      | character varying(255) | 
+ fornecedor    | character varying(255) | 
+ nf_fornecedor | character varying(20)  | 
+ nf_agencia    | character varying(20)  | 
+ contrato      | character varying(40)  | 
+ vigencia      | character varying(40)  | 
+ empenho       | character varying(40)  | 
+ valor_bruto   | numeric(20,2)          | 
+ data_pag      | date                   | 
+ tipo_servico  | character varying(120) | 
+ veiculo       | character varying(120) | 
+ sistema       | character varying(120) | 
+

@@ -1,0 +1,59 @@
+       Coluna        |          Tipo           | Modificadores 
+ nume_guia           | integer                 | 
+ ano_refe            | integer                 | 
+ nume_empe           | integer                 | 
+ ano_empe            | integer                 | 
+ codi_redc           | integer                 | 
+ codi_redr           | integer                 | 
+ codi_forn           | integer                 | 
+ data_guia           | date                    | 
+ valo_guia           | numeric(18,2)           | 
+ valo_pago           | numeric(18,2)           | 
+ valo_anul           | numeric(18,2)           | 
+ hist_guia           | character varying(500)  | 
+ data_ulal           | date                    | 
+ matr_usua           | character varying(50)   | 
+ tipo_guia           | character varying(50)   | 
+ tipo_guia_gera      | character varying(50)   | 
+ valo_emit_cheq      | numeric(18,2)           | 
+ codi_situ           | integer                 | 
+ codi_redc_prev      | integer                 | 
+ desc_tipo           | character varying(50)   | 
+ desc_tipo_gera      | character varying(50)   | 
+ sald_guia           | numeric(18,2)           | 
+ sald_ante           | numeric(18,2)           | 
+ nume_proc           | integer                 | 
+ marc_dia            | character varying(50)   | 
+ marc_reco           | integer                 | 
+ nume_parc           | integer                 | 
+ codi_mes            | integer                 | 
+ desc_situ           | character varying(50)   | 
+ anex_proc           | integer                 | 
+ codi_forc           | integer                 | 
+ codi_tipo_cons      | integer                 | 
+ codi_tipo_depo      | integer                 | 
+ ano_proc            | integer                 | 
+ ano_codi_mes        | integer                 | 
+ cont_publ           | integer                 | 
+ flag_lote           | integer                 | 
+ codi_barr           | character varying(50)   | 
+ valo_nomi_codi_barr | numeric(18,2)           | 
+ valo_desc_codi_barr | numeric(18,2)           | 
+ valo_mora_codi_barr | numeric(18,2)           | 
+ tipo_fatu           | character varying(50)   | 
+ data_venc_codi_barr | date                    | 
+ nume_guia_ante      | integer                 | 
+ desc_conta          | text                    | 
+ desc_rece           | text                    | 
+ codi_rece           | character varying(500)  | 
+ fonte               | character varying(500)  | 
+ data_pgto           | date                    | 
+ conta_pgto          | character varying(500)  | 
+ entidade            | character varying(500)  | 
+ nome_forn           | character varying(500)  | 
+ clas_fisc           | character varying(500)  | 
+ cnpj_cpf            | character varying(500)  | 
+ endereco            | character varying(1000) | 
+ cidade              | character varying(500)  | 
+ estado              | character varying(500)  | 
+

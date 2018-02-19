@@ -1,0 +1,13 @@
+  Coluna   |          Tipo          | Modificadores 
+ ano_refe  | integer                | 
+ mes_refe  | integer                | 
+ codi_enti | integer                | 
+ nome_enti | character varying(160) | 
+ codi_rece | character varying(160) | 
+ desc_rece | character varying(380) | 
+ desc_forc | character varying(380) | 
+ valo_arre | numeric(16,2)          | 
+ data_ulal | date                   | 
+ matr_usua | numeric(10,0)          | 
+ desc_tpmo | text                   | 
+

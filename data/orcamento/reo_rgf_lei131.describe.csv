@@ -1,0 +1,28 @@
+           Tabela "public.reo_rgf_lei131"
+  Coluna   |          Tipo          | Modificadores 
+-----------+------------------------+---------------
+ codi_rela | integer                | 
+ codi_linh | character varying(30)  | 
+ tipo_linh | character varying(1)   | 
+ ano_refe  | integer                | 
+ peri_gera | integer                | 
+ desc_linh | character varying(300) | 
+ valo_1    | numeric(16,2)          | 
+ valo_2    | numeric(16,2)          | 
+ valo_3    | numeric(16,2)          | 
+ valo_4    | numeric(16,2)          | 
+ valo_5    | numeric(16,2)          | 
+ valo_6    | numeric(16,2)          | 
+ valo_7    | numeric(16,2)          | 
+ valo_8    | numeric(16,2)          | 
+ valo_9    | numeric(16,2)          | 
+ valo_10   | numeric(16,2)          | 
+ valo_11   | numeric(16,2)          | 
+ valo_12   | numeric(16,2)          | 
+ valo_13   | numeric(16,2)          | 
+ valo_14   | numeric(16,2)          | 
+ data      | character varying(30)  | 
+Índices:
+    "ano_refe_reo_rgf" btree (ano_refe)
+    "codi_rela_reo_rgf" btree (codi_rela)
+

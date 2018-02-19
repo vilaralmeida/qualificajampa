@@ -1,0 +1,32 @@
+           Coluna           |          Tipo          | Modificadores 
+ id_proposta                | character varying(10)  | 
+ uf_proponente              | character varying(10)  | 
+ munic_proponente           | character varying(255) | 
+ cod_munic_ibge             | character varying(20)  | 
+ cod_orgao_sup              | character varying(10)  | 
+ desc_orgao_sup             | character varying(255) | 
+ natureza_juridica          | character varying(255) | 
+ nr_proposta                | character varying(20)  | 
+ dia_prop                   | character varying(10)  | 
+ mes_prop                   | character varying(10)  | 
+ ano_prop                   | character varying(10)  | 
+ dia_proposta               | date                   | 
+ cod_orgao                  | character varying(20)  | 
+ desc_orgao                 | character varying(255) | 
+ modalidade                 | character varying(255) | 
+ identif_proponente         | character varying(20)  | 
+ nm_proponente              | character varying(255) | 
+ cep_proponente             | character varying(10)  | 
+ endereco_proponente        | character varying(255) | 
+ bairro_proponente          | character varying(20)  | 
+ nm_banco                   | character varying(255) | 
+ situacao_conta             | character varying(255) | 
+ situacao_projeto_basico    | character varying(255) | 
+ sit_proposta               | character varying(255) | 
+ dia_inic_vigencia_proposta | date                   | 
+ dia_fim_vigencia_proposta  | date                   | 
+ objeto_proposta            | text                   | 
+ vl_global_prop             | numeric(20,2)          | 
+ vl_repasse_prop            | numeric(20,2)          | 
+ vl_contrapartida_prop      | numeric(20,2)          | 
+

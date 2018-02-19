@@ -1,0 +1,56 @@
+       Coluna        |          Tipo          | Modificadores 
+ ano_refe            | integer                | 
+ mes_refe            | integer                | 
+ codi_enti           | integer                | 
+ nome_enti           | character varying(160) | 
+ desc_forc           | character varying(380) | 
+ nume_empe           | integer                | 
+ ano_empe            | integer                | 
+ data_empe           | date                   | 
+ desc_tpem           | character varying(30)  | 
+ nome_forn           | character varying(300) | 
+ codi_elem           | character varying(8)   | 
+ desc_desp           | character varying(180) | 
+ desc_orga           | character varying(300) | 
+ desc_tpde           | character varying(300) | 
+ nume_proc           | integer                | 
+ desc_tpli           | character varying(100) | 
+ nume_lici           | character varying(10)  | 
+ nume_proc_lici      | character varying(30)  | 
+ valo_empe           | numeric(16,2)          | 
+ data_movi           | date                   | 
+ desc_tpmo           | character varying(60)  | 
+ nume_parc           | character varying(20)  | 
+ valo_movi           | numeric(16,2)          | 
+ data_ulal           | date                   | 
+ matr_usua           | character varying(30)  | 
+ desc_func           | text                   | 
+ desc_subf           | text                   | 
+ desc_prog           | text                   | 
+ cnpj_cpf            | character varying(60)  | 
+ desc_proj           | text                   | 
+ codi_orga           | character varying(5)   | 
+ codi_unor           | character varying(5)   | 
+ desc_unor           | text                   | 
+ codi_func           | character varying(5)   | 
+ codi_subf           | character varying(5)   | 
+ codi_prog           | character varying(5)   | 
+ codi_acao           | character varying(5)   | 
+ desc_acao           | text                   | 
+ tota_cred           | numeric(18,2)          | 
+ valo_orca           | numeric(18,2)          | 
+ sald_ante           | numeric(18,2)          | 
+ codi_sube           | character varying(10)  | 
+ desc_sube           | text                   | 
+ insc_esta           | character varying(15)  | 
+ insc_muni           | character varying(7)   | 
+ nume_pis            | character varying(11)  | 
+ ncon_indi           | character varying(12)  | 
+ codi_forc           | character varying(5)   | 
+ ug                  | character varying(6)   | 
+ tipo_documento      | character varying(50)  | 
+ numero_documento    | character varying(100) | 
+ conta_pagadora      | character varying(100) | 
+ historico_pagamento | text                   | 
+ nume_contr          | character varying(50)  | 
+

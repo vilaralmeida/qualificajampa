@@ -1,0 +1,33 @@
+          Coluna           |          Tipo          | Modificadores 
+ nr_convenio               | character varying(10)  | 
+ id_proposta               | character varying(10)  | 
+ dia                       | character varying(10)  | 
+ mes                       | character varying(10)  | 
+ ano                       | character varying(10)  | 
+ dia_assin_conv            | date                   | 
+ sit_convenio              | character varying(255) | 
+ subsituacao_conv          | character varying(255) | 
+ situacao_publicacao       | character varying(255) | 
+ instrumento_ativo         | character varying(10)  | 
+ ind_opera_obtv            | character varying(10)  | 
+ nr_processo               | character varying(50)  | 
+ ug_emitente               | character varying(255) | 
+ dia_publ_conv             | date                   | 
+ dia_inic_vigenc_conv      | date                   | 
+ dia_fim_vigenc_conv       | date                   | 
+ dias_prest_contas         | character varying(10)  | 
+ dia_limite_prest_contas   | date                   | 
+ situacao_contratacao      | character varying(255) | 
+ qtde_convenios            | character varying(10)  | 
+ qtd_ta                    | character varying(10)  | 
+ qtd_prorroga              | character varying(10)  | 
+ vl_global_conv            | numeric(20,2)          | 
+ vl_repasse_conv           | numeric(20,2)          | 
+ vl_contrapartida_conv     | numeric(20,2)          | 
+ vl_empenhado_conv         | numeric(20,2)          | 
+ vl_desembolsado_conv      | numeric(20,2)          | 
+ vl_saldo_reman_tesouro    | numeric(20,2)          | 
+ vl_saldo_reman_convenente | numeric(20,2)          | 
+ vl_rendimento_aplicacao   | numeric(20,2)          | 
+ vl_ingresso_contrapartida | numeric(20,2)          | 
+

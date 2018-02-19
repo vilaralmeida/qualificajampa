@@ -1,0 +1,12 @@
+Package: qualificajampa
+Type: Package
+Title: Qualificacao de Dados Abertos da Prefeitura Municipal de Joao Pessoa
+Version: 0.1.0
+Author: Rodrigo Almeida <rodrigo.almeida@gmail.com>
+Maintainer: Rodrigo Almeida <rodrigo.almeida@gmail.com>
+Description: Pacote com Avaliacao de Dados dos Datasets relacionados aos Dados Abertos do Portal da Transparencia da Prefeitura Municipal de Joao Pessoa
+License: What license is it under?
+LazyData: true
+RoxygenNote: 6.0.1
+Dependencies: dplyr
+Suggests: testthat
