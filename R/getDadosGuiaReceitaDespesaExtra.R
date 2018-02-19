@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Guia Receitas Despesas
+#' @description
 #' Retorna Informacoes de Receitas e Despesas Extras da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,13 +14,14 @@
 #' @return Dados de Receitas e Despesas Extras
 #' @examples
 #' getDadosGuiaReceitaDespesaExtra(): Retorna data.frame com dados de Receitas e Despesas Extras. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosGuiaReceitaDespesaExtra <- function(path = "data/orcamento/",
                                      filename = "guia_receita_despesa_extra_random.csv") {
-  
+
   caminhoArquivo = paste(path,filename, sep = "")
-  
+
   guia_receita_despesa_extra <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
-  
+
   colnames(guia_receita_despesa_extra) <- c("nume_guia",
                                             "ano_refe",
                                             "nume_empe",
@@ -77,10 +79,10 @@ getDadosGuiaReceitaDespesaExtra <- function(path = "data/orcamento/",
                                             "endereco",
                                             "cidade",
                                             "estado")
-  
+
   guia_receita_despesa_extra[guia_receita_despesa_extra == "\\N"] <- NA
-  
+
   #retorno
   guia_receita_despesa_extra
-  
+
   }

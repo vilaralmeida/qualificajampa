@@ -5,7 +5,7 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @exportMethod
+#' @title Avaliacao Total Dados Abertos JP
 #' @description
 #' Função para Qualificação de Dados Abertos de Joao Pessoa (Todos os campos independente de Problemas)
 #' Todos os CVSs utilizados está disponivel em: transparencia.joaopessoa.pb.gov.br/download (10/02/2018)
@@ -16,31 +16,7 @@
 #' nas seguintes áreas: Pessoas, Convenios (Propostas e Convenios Firmados), Publicidade,
 #' Orçamentarios (Despesas, Receitas, Empenho, Guia de Receitas e Despesas Extras)
 #' @import xray
-#' @source getDadosConvenios
-#' @source getDadosDespesas
-#' @source getDadosGuiaReceitaDespesaExtra
-#' @source getDadosItensEmpenho
-#' @source getDadosPessoal
-#' @source getDadosPropostasConvenios
-#' @source getDadosPublicidade
-#' @source getDadosReceitas
-#' @source getTabelaDadosQualificados
-#' @source utils
-
-source('./R/getDadosPublicidade.R', local = TRUE)
-source('./R/getDadosPessoal.R', local = TRUE)
-source('./R/getDadosReceitas.R', local = TRUE)
-source('./R/getDadosDespesas.R', local = TRUE)
-source('./R/getDadosItensEmpenho.R', local = TRUE)
-source('./R/getDadosGuiaReceitaDespesaExtra.R', local = TRUE)
-source('./R/getDadosConvenios.R', local = TRUE)
-source('./R/getDadosPropostasConvenios.R', local = TRUE)
-source('./R/getTabelaDadosQualificados.R', local = TRUE)
-source('./R/utils.R', local = TRUE)
-
-# Remove Warningns
-options( warn = -1 )
-
+#' @export
 avaliacaoTotalDadosAbertosJP <- function(anomaly_threshold = 0.8) {
   # Importante: Nome dos Objetos igual ao Nome das Tabelas
 

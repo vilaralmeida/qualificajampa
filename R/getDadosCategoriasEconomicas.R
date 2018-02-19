@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Categorias Economicas
+#' @description
 #' Retorna Informacoes de Categorias Economicas da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,13 +14,14 @@
 #' @return Dados de Categorias Economicas
 #' @examples
 #' getDadosCategoriasEconomicas(): Retorna data.frame com dados de Categorias Economicas. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosCategoriasEconomicas <- function(path = "data/orcamento/",
                             filename = "categorias_economicas.csv") {
-  
+
   caminhoArquivo = paste(path,filename, sep = "")
   categorias_economicas <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
   colnames(categorias_economicas) <- c("id","categoria_desc")
-  
+
   #retorno
   categorias_economicas
 }

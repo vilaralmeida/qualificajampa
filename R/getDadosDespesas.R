@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Despesas
+#' @description
 #' Retorna Informacoes de Despesas da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,6 +14,7 @@
 #' @return Dados de Despesas. Agrega os anos 2009 a 2018
 #' @examples
 #' getDadosDespesas(): Retorna data.frame com dados de Despesas. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosDespesas <- function(path = "data/orcamento/",
                                          filename = c("despesa_lei131_2009_random.csv",
                                                       "despesa_lei131_2010_random.csv",
@@ -24,14 +26,14 @@ getDadosDespesas <- function(path = "data/orcamento/",
                                                       "despesa_lei131_2016_random.csv",
                                                       "despesa_lei131_2017_random.csv",
                                                       "despesa_lei131_2018_random.csv")) {
-  
+
   despesas <- data.frame()
   for(i in 1:length(filename)) {
     caminhoArquivo = paste(path,filename[i], sep = "")
     temp <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
     despesas <- rbind(despesas, temp)
   }
-  
+
   colnames(despesas) <- c("ano_refe",
                                      "mes_refe",
                                      "codi_enti",
@@ -86,12 +88,11 @@ getDadosDespesas <- function(path = "data/orcamento/",
                                      "conta_pagadora",
                                      "historico_pagamento",
                                      "nume_contr")
-  
+
   despesas[despesas == "\\N"] <- NA
-  
+
   #retorno
   despesas
-  
+
 }
-  
-  
+

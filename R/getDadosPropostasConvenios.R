@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Propostas Convenios
+#' @description
 #' Retorna Informacoes de Propostas de Convenios da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,11 +14,12 @@
 #' @return Dados de Propostas de Convenios do Sistema de Convenios (Siconv)
 #' @examples
 #' getDadosPropostasConvenios(): Retorna data.frame com dados de Propostas de Convênios. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosPropostasConvenios <- function(path = "data/convenios/",
                               filename = "siconv_proposta.csv") {
-  
+
   caminhoArquivo = paste(path,filename, sep = "")
-  
+
   siconv_proposta <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
   colnames(siconv_proposta) <- c("id_proposta",
                                  "uf_proponente",
@@ -49,8 +51,8 @@ getDadosPropostasConvenios <- function(path = "data/convenios/",
                                  "vl_global_prop",
                                  "vl_repasse_prop",
                                  "vl_contrapartida_prop")
-  
+
   # retorno
   siconv_proposta
-  
+
   }

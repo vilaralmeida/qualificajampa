@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title Dados Natureza Despesas
+#' @description
 #' Retorna Informacoes de Natureza das Despesas da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,13 +14,14 @@
 #' @return Dados de Natureza das Despesas
 #' @examples
 #' getDadosNaturezaDespesas(): Retorna data.frame com dados de Natureza das Despesas. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosNaturezaDespesas <- function(path = "data/orcamento/",
                                filename = "grupo_natureza_despesa.csv") {
   caminhoArquivo = paste(path,filename, sep = "")
   grupo_natureza_despesa <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
-  
+
   colnames(grupo_natureza_despesa) <- c("id", "grupo_desc")
   # retorno
   grupo_natureza_despesa
-  
+
 }

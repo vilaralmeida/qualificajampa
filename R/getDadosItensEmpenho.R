@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Itens Empenho
+#' @description
 #' Retorna Informacoes de Itens Empenho da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,6 +14,7 @@
 #' @return Dados Itens Empenho
 #' @examples
 #' getDadosItensEmpenho(): Retorna data.frame com dados de Itens Empenho. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosItensEmpenho <- function(path = "data/orcamento/",
                             filename = c("itens_empenho_2009_random.csv",
                                          "itens_empenho_2010_random.csv",
@@ -30,7 +32,7 @@ getDadosItensEmpenho <- function(path = "data/orcamento/",
     temp <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
     itens_empenho <- rbind(itens_empenho, temp)
   }
-  
+
   colnames(itens_empenho) <- c("nume_empe",
                                     "ano_refe",
                                     "codi_item",
@@ -42,10 +44,10 @@ getDadosItensEmpenho <- function(path = "data/orcamento/",
                                     "matr_usua",
                                     "valo_tota",
                                     "data_empe")
-  
+
   itens_empenho[itens_empenho == "\\N"] <- NA
-  
+
   #retorno
   itens_empenho
-  
+
 }

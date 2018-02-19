@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Publicidade
+#' @description
 #' Retorna Informacoes de Publicidade da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,9 +14,10 @@
 #' @return Dados de Publicidade
 #' @examples
 #' getDadosPublicidade(): Retorna data.frame com dados de Publicidade. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosPublicidade <- function(path = "data/publicidade/",
                                 filename = "publicidade_random.csv") {
-  
+
   caminhoArquivo = paste(path,filename, sep = "")
   publicidade <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
   #publicidade <- publicidade[,c(1:13)]

@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados REORGF
+#' @description
 #' Retorna Informacoes de REO e RGF da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,11 +14,12 @@
 #' @return Dados de Relatório Resumido de Execução Orçamentária e Relatório de Gestão Fiscal
 #' @examples
 #' getDadosREORGF(): Retorna data.frame com dados de Relatórios REO e RGF. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosREORGF <- function(path = "data/orcamento/",
                                      filename = "reo_rgf_lei131_random.csv") {
-  
+
   caminhoArquivo = paste(path,filename, sep = "")
-  
+
   reo_rgf_lei131 <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
   colnames(reo_rgf_lei131) <- c("codi_rela",
                                 "codi_linh",

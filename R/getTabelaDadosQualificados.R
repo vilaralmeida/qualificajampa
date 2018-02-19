@@ -5,37 +5,32 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Tabela Dados Qualificados
+#' @description
 #' Retorna Informacoes de Qualificacao para Tabela (Somente variaves problematicas)
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param obj Objeto contendo dados (Amostra) da Tabela para Avaliação.
-#' @param tabela Qual Tabela terá a Informação Recuperada. 
+#' @param tabela Qual Tabela terá a Informação Recuperada.
 #' @param anomaly_threshold Threshold de Anomalias
 #' Opções: pessoal, publicidade, receitas, despesas, empenho, receitasdespesasextras, convenios, propostas
 #' @param categoria (Publicidade, Pessoal, Convenio, Orcamento)
 #' @return Informacoes de Qualificacao da Tabela passada como parametro
 #' @examples
 #' getTabelaDadosQualificados(): Retorna Qualificacao dos Dados da Tabela (Somente variaves problematicas)
-#' @source getInfoTabela
 #' @import xray
 #' @import dplyr
-
-
-source('./R/getInfoTabela.R', local = TRUE)
-source('./R/utils.R', local = TRUE)
-library(xray)
-library(dplyr)
+#' @export
 getTabelaDadosQualificados <- function(obj = NA,
                                        tabela = "",
                                        categoria = "",
                                        anomaly_threshold = 0.8) {
-  
+
   if (is.na(obj) | tabela == "" | categoria == "") {
     stop("Parametros Incompletos")
   }
 
   df <- data.frame()
-  
+
   anomalias <- as.data.frame(xray::anomalies(obj, anomaly_threshold = anomaly_threshold)[2])
   colnames(anomalias) <- c("Coluna",
                            "Quantidade_Linhas",
@@ -51,17 +46,17 @@ getTabelaDadosQualificados <- function(obj = NA,
                            "Tipo_Objeto",
                            "Percentual_Anomalias",
                            "Descricao")
-  
+
   dadosTabela <- getInfoTabela(tabela = tabela)
   dadosTabela <- data.frame(lapply(dadosTabela,trim))
   dadosTabela <- data.frame(lapply(dadosTabela, as.character), stringsAsFactors=FALSE)
-  
+
   if (nrow(anomalias) > 0) {
     col <- as.character(anomalias$Coluna)
-    
+
     # Dataframe com Informacoes a serem incorporadas
     dfIncorporado <- data.frame()
-    
+
     for(i in 1:(length(col))) {
       dadosResumidosTabela <- dadosTabela %>% filter(Coluna == col[i])
       # print("####")
@@ -77,14 +72,14 @@ getTabelaDadosQualificados <- function(obj = NA,
       temp <- c(dadosResumidosTabela$Tipo, categoria, tabela)
       dfIncorporado <- rbind(dfIncorporado, temp)
     }
-    
+
     colnames(dfIncorporado) <- c("Tipo_Dado",
                                  "Categoria",
                                  "Tabela")
-    
+
     df <- cbind(anomalias, dfIncorporado)
   }
-  
+
   # Retorno
   df
 

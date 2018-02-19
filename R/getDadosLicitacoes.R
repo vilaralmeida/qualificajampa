@@ -5,7 +5,8 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
-#' @description 
+#' @title get Dados Licitacoes
+#' @description
 #' Retorna Informacoes de Publicidade da Prefeitura de Joao Pessoa
 #' Disponivel em: transparencia.joaopessoa.pb.gov.br/download
 #' @param path Caminho para o Arquivo
@@ -13,10 +14,11 @@
 #' @return Dados de Licitacoes
 #' @examples
 #' getDadosLicitacoes(): Retorna data.frame com dados de Licitacoes. O Data.frame conterá uma amostra aleatória da população
+#' @export
 getDadosLicitacoes <- function(path = "data/licitacoes/",
                                 filename = "licitacoes_random.csv") {
   caminhoArquivo = paste(path,filename, sep = "")
-  
+
   licitacoes <- read.csv2(file = caminhoArquivo, sep = "|", header = FALSE)
   colnames(licitacoes) <- c("ID",
                             "data_postagem",
@@ -28,7 +30,7 @@ getDadosLicitacoes <- function(path = "data/licitacoes/",
                             "modalidade",
                             "comissao",
                             "docu")
-  
+
   licitacoes[licitacoes == "\\N"] <- NA
   # retorna licitacoes
   licitacoes

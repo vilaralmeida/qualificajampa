@@ -6,7 +6,10 @@ Author: Rodrigo Almeida <rodrigo.almeida@gmail.com>
 Maintainer: Rodrigo Almeida <rodrigo.almeida@gmail.com>
 Description: Pacote com Avaliacao de Dados dos Datasets relacionados aos Dados Abertos do Portal da Transparencia da Prefeitura Municipal de Joao Pessoa
 License: What license is it under?
-LazyData: true
+LazyData: TRUE
+Encoding: UTF-8
 RoxygenNote: 6.0.1
-Dependencies: dplyr
+Depends: 
+      dplyr, 
+      xray
 Suggests: testthat

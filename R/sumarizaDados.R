@@ -5,10 +5,11 @@
 # Website: http://rodrigoalmeida.jampa.br                                    #
 ##############################################################################
 
+#' @title sumarizaDados
 #' @description Sumariza Dados de Qualificação da Prefeitura de Joao Pessoa
-
+#' @export
 sumarizaDados <- function() {
-  
+
   # Soma de Colunas de todos os Dataframes Construídos
   numeroCampos <- 218
   # Total de Arquivos CSV Avaliados
@@ -17,5 +18,5 @@ sumarizaDados <- function() {
   numeroLinhas <- 5289752
   # Percentual Minimo de linhas anômalas para que a Coluna seja problematica
   anomaly_threshold <- 0.8
-  
+
 }
